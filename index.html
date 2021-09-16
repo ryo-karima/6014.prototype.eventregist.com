@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<!-- v13231 -->
+<title>デモページ – EventRegist ヘルプセンター</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="oW7GbLn64Pp4Xr5qhZIwDP46a3yBcPKnR88eKsK2c3cQBJCRh4VbHMBYrqa7bQEkPayFyU06O+/F2wRyx8/87A==">
+<meta name="description" content="Eventregist（イベントレジスト）は、デザインのカスタマイズも自由自在です。 目的に応じて、イベント主催者様好みのイベント告知ページを作ることができます。 以下のデモページで、実際にお申込も体験していただけますので是非お試しください。  ...">
+<meta property="og:image" content="http://p12.zdassets.com/hc/settings_assets/659257/200051248/f3l4WTxkTsCMnNaq8wQtcA-hand_hold.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EventRegist ヘルプセンター">
+<meta property="og:title" content="デモページ">
+<meta property="og:description" content="Eventregist（イベントレジスト）は、デザインのカスタマイズも自由自在です。 目的に応じて、イベント主催者様好みのイベント告知ページを作ることができます。
+以下のデモページで、実際にお申込も体験していただけますので是非お試しください。 
+
+[ベーシック版のデモイベント]
+EventRegistに会員登録するだけで、すぐに作成することができるイベントのデモページです。
+&nbsp;
+例えば、セミ...">
+<meta property="og:url" content="http://help.eventregist.com/hc/ja/articles/204573837-%E3%83%87%E3%83%A2%E3%83%9A%E3%83%BC%E3%82%B8">
+<link rel="canonical" href="https://help.eventregist.com/hc/ja/articles/204573837-%E3%83%87%E3%83%A2%E3%83%9A%E3%83%BC%E3%82%B8">
+<link rel="alternate" hreflang="en" href="https://help.eventregist.com/hc/en-us/articles/204573837-Demo-Pages">
+<link rel="alternate" hreflang="ja" href="https://help.eventregist.com/hc/ja/articles/204573837-%E3%83%87%E3%83%A2%E3%83%9A%E3%83%BC%E3%82%B8">
+
+<!-- Entypo pictograms by Daniel Bruce — www.entypo.com -->
+<link rel="stylesheet" media="all" href="contens/application-a1fa96afa47eb18d40b332ccf9033704.css" id="stylesheet">
+<link rel="stylesheet" type="text/css" href="contens/style-47a80942cc5ad0ee113ecdf0e386d1b1.css">
+<link rel="shortcut icon" type="image/x-icon" href="https://p12.zdassets.com/hc/settings_assets/659257/200051248/zUpc3LTDu08uIUrpPiIxpg-hand_hold.png">
+
+<!--[if lt IE 9]>
+  <script>
+    //Enable HTML5 elements for <IE9
+    'abbr article aside audio bdi canvas data datalist details dialog \
+    figcaption figure footer header hgroup main mark meter nav output \
+    progress section summary template time video'.replace(/\w+/g,function(n){document.createElement(n)});
+  </script>
+<![endif]-->
+
+<script id="facebook-jssdk" src="contens/sdk.js"></script><script async="" src="contens/analytics.js"></script><script src="contens/jquery-b60ddb79ff2563b75442a6bac88b00b5.js"></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-26071627-4', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+<!-- add code here that should appear in the document head -->
+
+<meta name="google-site-verification" content="_CNPSIij5mHw1L2zcuOu8ouxm54y9m8TbaXE70AQPuY">
+<link rel="stylesheet" type="text/css" media="screen,print" href="contens/jquery-ui.css">
+<script type="text/javascript" src="contens/jquery-1.js"></script>
+<script type="text/javascript" src="contens/jquery-ui-1.js"></script>
+<script type="text/javascript" src="contens/event.js"></script>
+<script type="text/javascript" src="contens/rem.js"></script>
+<script type="text/javascript" src="contens/respond.js"></script>
+<script type="text/javascript" src="contens/sns_share.js"></script>
+<script type="text/javascript">
+$(function(){
+  //言語選択メニューを表示する
+  $('._dropDownHover').hover(
+    function(){
+      $(this).children('.dropDownBlock').show();
+    },
+    function(){
+      $(this).children('.dropDownBlock').fadeOut();
+    }
+  );
+
+	var _headerH = $('header').height() + $('.alertmessage').height();
+	var _bodyH = $('body').height() - $('footer').height() - $(window).height() + 70;
+
+		//ホームページ、ヘルプページの場合は、ヘッダーサブメニューを固定配置する
+	if($(window).width() >= 768){
+		$(window).scroll(function(){
+			if($(window).scrollTop()>=_headerH){
+				$('#gnavi-inner-home').addClass('fixed');
+				$('#page-top').fadeIn();
+			}
+			else {
+				$('#gnavi-inner-home').removeClass('fixed');
+				$('#page-top').fadeOut();
+			}
+			if($(window).scrollTop()>=_bodyH){
+				$('#page-top a').addClass('fixed');
+			}
+			else {
+				$('#page-top a').removeClass('fixed');
+			}
+		});
+	}
+	});
+ function slidePageTop(){
+		$('html,body').animate({ scrollTop: 0 }, 'swing');
+		return false;
+}
+</script>
+<script type="text/javascript">
+$(function(){
+  $('header').before('<div id="SDM"><div id="SDM1"><ul><li class="selected"><a href="http://eventregist.com/">ホーム</a></li><li><a href="https://eventregist.com/login">ログイン</a></li><li><a onclick="openSignupPopup(\'/entry/er?event_code=\', \'\');" href="javascript:void(0)">新規会員登録</a></li><li><a href="/event/new">新しいイベントを作る</a></li></ul><h2>言語</h2><ul><li class="selected"><a href="https://eventregist.com/?lang=ja_JP">日本語</a></li><li class=""><a href="https://eventregist.com/?lang=en_US">English</a></li><li class=""><a href="https://eventregist.com/?lang=id_ID">Bahasa Indonesia</a></li><li class=""><a href="https://eventregist.com/?lang=zh_TW">中文(繁體)</a></li><li class=""><a href="https://eventregist.com/?lang=th_TH">ภาษาไทย</a></li></ul><h2>サポート・ヘルプ </h2><ul><li><a href="http://info.eventregist.com/about">イベントレジストについて</a></li><li><a href="http://info.eventregist.com/premium_features">プレミアム機能</a></li><li><a href="http://info.eventregist.com/operation">運営サポート</a></li><li><a href="http://info.eventregist.com/case-study">ご活用事例</a></li><li><a href="http://info.eventregist.com/library">資料ダウンロード</a></li><li><a href="http://eventregist.com/s/ja_JP/help/about-eventregist/eventowner-faq">FAQ（主催者の方へ）</a></li><li><a href="http://eventregist.com/s/ja_JP/help/about-eventregist/eventparticipants-faq">FAQ（参加者の方へ）</a></li><li><a href="http://eventregist.com/s/ja_JP/help/about-eventregist/howtouse">使い方</a></li><li><a href="http://eventregist.com/s/ja_JP/help/main">ヘルプセンター</a></li><li><a href="http://info.eventregist.com/weblog">ブログ</a></li></ul><h2>EventRegist Co., Ltd.</h2><ul><li><a href="http://eventregist.jp/" target="_blank">会社概要</a></li><li><a href="http://eventregist.com/s/ja_JP/c/about">特定商取引法に基づく表記</a></li><li><a href="http://eventregist.com/s/ja_JP/c/tos">ご利用規約</a></li><li><a href="http://eventregist.com/s/ja_JP/c/privacypolicy">個人情報保護方針</a></li><li><a href="http://eventregist.jp/career/" target="_blank">採用情報</a></li><li><a href="http://eventregist.com/s/ja_JP/c/press">取材について</a></li></ul><p class="copy">Copyright © EventRegist Co., Ltd. All rights reserved.</p></div></div>');
+});
+</script>
+
+<!--
+<script type="text/javascript">
+$(function(){
+    $('body').wrapInner('<div id="LW"><div id="LW1"></div></div>');
+});
+</script>
+-->
+
+<script type="text/javascript">
+$(function(){
+	$('ul.gnavi li a[href="' + window.location + '"]').parent().addClass('selected');
+});
+</script>
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="https://p5.zdassets.com/hc/theme_assets/659257/200051248/html5shiv-printshiv.js"></script>
+<script type="text/javascript" src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+<!--[if lte IE 8]>
+<style>
+section.main.home {
+    min-height:100%;
+    background: url(http://info.eventregist.com/hubfs/er_img/bg_main01.jpg) center no-repeat;
+    -ms-behavior: url(http://info.eventregist.com/hubfs/er_img/backgroundsize.min.htc);
+    behavior: url(http://info.eventregist.com/hubfs/er_img/backgroundsize.min.htc);
+    background-size: cover;
+}
+</style>
+<![endif]-->
+
+<script type="text/javascript" src="contens/script-47a80942cc5ad0ee113ecdf0e386d1b1.js"></script>
+<script type="text/javascript" charset="utf-8" async="" src="contens/SubscriptionControls-8f0a91edc5908fa9792fcb1402d2a7a9.js"></script>
+<style type="text/css">
+.fb_hidden {
+	position: absolute;
+	top: -10000px;
+	z-index: 10001
+}
+
+.fb_reposition {
+	overflow: hidden;
+	position: relative
+}
+
+.fb_invisible {
+	display: none
+}
+
+.fb_reset {
+	background: none;
+	border: 0;
+	border-spacing: 0;
+	color: #000;
+	cursor: auto;
+	direction: ltr;
+	font-family: "lucida grande", tahoma, verdana, arial, "hiragino kaku gothic pro", meiryo, "ms pgothic", sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	letter-spacing: normal;
+	line-height: 1;
+	margin: 0;
+	overflow: visible;
+	padding: 0;
+	text-align: left;
+	text-decoration: none;
+	text-indent: 0;
+	text-shadow: none;
+	text-transform: none;
+	visibility: visible;
+	white-space: normal;
+	word-spacing: normal
+}
+
+.fb_reset>div {
+	overflow: hidden
+}
+
+.fb_link img {
+	border: none
+}
+@keyframes fb_transform {
+from {
+opacity:0;
+transform:scale(.95)
+}
+to {
+opacity:1;
+transform:scale(1)
+}
+}
+
+.fb_animate {
+	animation: fb_transform .3s forwards
+}
+
+.fb_dialog {
+	background: rgba(82, 82, 82, .7);
+	position: absolute;
+	top: -10000px;
+	z-index: 10001
+}
+
+.fb_reset .fb_dialog_legacy {
+	overflow: visible
+}
+
+.fb_dialog_advanced {
+	padding: 10px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px
+}
+
+.fb_dialog_content {
+	background: #fff;
+	color: #333
+}
+
+.fb_dialog_close_icon {
+	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
+	cursor: pointer;
+	display: block;
+	height: 15px;
+	position: absolute;
+	right: 18px;
+	top: 17px;
+	width: 15px
+}
+
+.fb_dialog_mobile .fb_dialog_close_icon {
+	top: 5px;
+	left: 5px;
+	right: auto
+}
+
+.fb_dialog_padding {
+	background-color: transparent;
+	position: absolute;
+	width: 1px;
+	z-index: -1
+}
+
+.fb_dialog_close_icon:hover {
+	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent
+}
+
+.fb_dialog_close_icon:active {
+	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent
+}
+
+.fb_dialog_loader {
+	background-color: #f6f7f9;
+	border: 1px solid #606060;
+	font-size: 24px;
+	padding: 20px
+}
+
+.fb_dialog_top_left, .fb_dialog_top_right, .fb_dialog_bottom_left, .fb_dialog_bottom_right {
+	height: 10px;
+	width: 10px;
+	overflow: hidden;
+	position: absolute
+}
+
+.fb_dialog_top_left {
+	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;
+	left: -10px;
+	top: -10px
+}
+
+.fb_dialog_top_right {
+	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;
+	right: -10px;
+	top: -10px
+}
+
+.fb_dialog_bottom_left {
+	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;
+	bottom: -10px;
+	left: -10px
+}
+
+.fb_dialog_bottom_right {
+	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;
+	right: -10px;
+	bottom: -10px
+}
+
+.fb_dialog_vert_left, .fb_dialog_vert_right, .fb_dialog_horiz_top, .fb_dialog_horiz_bottom {
+	position: absolute;
+	background: #525252;
+	filter: alpha(opacity=70);
+	opacity: .7
+}
+
+.fb_dialog_vert_left, .fb_dialog_vert_right {
+	width: 10px;
+	height: 100%
+}
+
+.fb_dialog_vert_left {
+	margin-left: -10px
+}
+
+.fb_dialog_vert_right {
+	right: 0;
+	margin-right: -10px
+}
+
+.fb_dialog_horiz_top, .fb_dialog_horiz_bottom {
+	width: 100%;
+	height: 10px
+}
+
+.fb_dialog_horiz_top {
+	margin-top: -10px
+}
+
+.fb_dialog_horiz_bottom {
+	bottom: 0;
+	margin-bottom: -10px
+}
+
+.fb_dialog_iframe {
+	line-height: 0
+}
+
+.fb_dialog_content .dialog_title {
+	background: #6d84b4;
+	border: 1px solid #365899;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0
+}
+
+.fb_dialog_content .dialog_title>span {
+	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
+	float: left;
+	padding: 5px 0 7px 26px
+}
+
+body.fb_hidden {
+	-webkit-transform: none;
+	height: 100%;
+	margin: 0;
+	overflow: visible;
+	position: absolute;
+	top: -10000px;
+	left: 0;
+	width: 100%
+}
+
+.fb_dialog.fb_dialog_mobile.loading {
+	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
+	min-height: 100%;
+	min-width: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	z-index: 10001
+}
+
+.fb_dialog.fb_dialog_mobile.loading.centered {
+	width: auto;
+	height: auto;
+	min-height: initial;
+	min-width: initial;
+	background: none
+}
+
+.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
+	width: 100%
+}
+
+.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
+	background: none
+}
+
+.loading.centered #fb_dialog_loader_close {
+	color: #fff;
+	display: block;
+	padding-top: 20px;
+	clear: both;
+	font-size: 18px
+}
+
+#fb-root #fb_dialog_ipad_overlay {
+	background: rgba(0, 0, 0, .45);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%;
+	min-height: 100%;
+	z-index: 10000
+}
+
+#fb-root #fb_dialog_ipad_overlay.hidden {
+	display: none
+}
+
+.fb_dialog.fb_dialog_mobile.loading iframe {
+	visibility: hidden
+}
+
+.fb_dialog_content .dialog_header {
+	-webkit-box-shadow: white 0 1px 1px -1px inset;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));
+	border-bottom: 1px solid;
+	border-color: #1d4088;
+	color: #fff;
+	font: 14px Helvetica, sans-serif;
+	font-weight: bold;
+	text-overflow: ellipsis;
+	text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0;
+	vertical-align: middle;
+	white-space: nowrap
+}
+
+.fb_dialog_content .dialog_header table {
+	-webkit-font-smoothing: subpixel-antialiased;
+	height: 43px;
+	width: 100%
+}
+
+.fb_dialog_content .dialog_header td.header_left {
+	font-size: 12px;
+	padding-left: 5px;
+	vertical-align: middle;
+	width: 60px
+}
+
+.fb_dialog_content .dialog_header td.header_right {
+	font-size: 12px;
+	padding-right: 5px;
+	vertical-align: middle;
+	width: 60px
+}
+
+.fb_dialog_content .touchable_button {
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));
+	border: 1px solid #29487d;
+	-webkit-background-clip: padding-box;
+	-webkit-border-radius: 3px;
+	-webkit-box-shadow: rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;
+	display: inline-block;
+	margin-top: 3px;
+	max-width: 85px;
+	line-height: 18px;
+	padding: 4px 12px;
+	position: relative
+}
+
+.fb_dialog_content .dialog_header .touchable_button input {
+	border: none;
+	background: none;
+	color: #fff;
+	font: 12px Helvetica, sans-serif;
+	font-weight: bold;
+	margin: 2px -12px;
+	padding: 2px 6px 3px 6px;
+	text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+}
+
+.fb_dialog_content .dialog_header .header_center {
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 18px;
+	text-align: center;
+	vertical-align: middle
+}
+
+.fb_dialog_content .dialog_content {
+	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
+	border: 1px solid #555;
+	border-bottom: 0;
+	border-top: 0;
+	height: 150px
+}
+
+.fb_dialog_content .dialog_footer {
+	background: #f6f7f9;
+	border: 1px solid #555;
+	border-top-color: #ccc;
+	height: 40px
+}
+
+#fb_dialog_loader_close {
+	float: left
+}
+
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button {
+	text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+}
+
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
+	visibility: hidden
+}
+
+#fb_dialog_loader_spinner {
+	animation: rotateSpinner 1.2s linear infinite;
+	background-color: transparent;
+	background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	height: 24px;
+	width: 24px
+}
+@keyframes rotateSpinner {
+0% {
+transform:rotate(0deg)
+}
+100% {
+transform:rotate(360deg)
+}
+}
+
+.fb_iframe_widget {
+	display: inline-block;
+	position: relative
+}
+
+.fb_iframe_widget span {
+	display: inline-block;
+	position: relative;
+	text-align: justify
+}
+
+.fb_iframe_widget iframe {
+	position: absolute
+}
+
+.fb_iframe_widget_fluid_desktop, .fb_iframe_widget_fluid_desktop span, .fb_iframe_widget_fluid_desktop iframe {
+	max-width: 100%
+}
+
+.fb_iframe_widget_fluid_desktop iframe {
+	min-width: 220px;
+	position: relative
+}
+
+.fb_iframe_widget_lift {
+	z-index: 1
+}
+
+.fb_hide_iframes iframe {
+	position: relative;
+	left: -10000px
+}
+
+.fb_iframe_widget_loader {
+	position: relative;
+	display: inline-block
+}
+
+.fb_iframe_widget_fluid {
+	display: inline
+}
+
+.fb_iframe_widget_fluid span {
+	width: 100%
+}
+
+.fb_iframe_widget_loader iframe {
+	min-height: 32px;
+	z-index: 2;
+	zoom: 1
+}
+
+.fb_iframe_widget_loader .FB_Loader {
+	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;
+	height: 32px;
+	width: 32px;
+	margin-left: -16px;
+	position: absolute;
+	left: 50%;
+	z-index: 4
+}
+
+.fb_invisible_flow {
+	display: inherit;
+	height: 0;
+	overflow-x: hidden;
+	width: 0
+}
+
+.fb_mobile_overlay_active {
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+	width: 100%
+}
+
+.fb_shrink_active {
+	opacity: 1;
+	transform: scale(1, 1);
+	transition-duration: 200ms;
+	transition-timing-function: ease-out
+}
+
+.fb_shrink_active:active {
+	opacity: .5;
+	transform: scale(.75, .75)
+}
+
+.en-markup-crop-options {
+	top: 18px !important;
+	left: 50% !important;
+	margin-left: -100px !important;
+	width: 200px !important;
+	border: 2px rgba(255,255,255,.38) solid !important;
+	border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+	margin-left: 0px !important;
+}
+
+article.main-column .content-body ul * {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+article.main-column .content-body ul.demo {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: left;
+	margin: 0;
+	padding: 0;
+}
+
+article.main-column .content-body ul.demo li {
+	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+	list-style: outside none none;
+	position: relative;
+	overflow: hidden;
+	margin: 0 18px 20px 0;
+}
+
+article.main-column .content-body ul.demo li .img {
+}
+
+article.main-column .content-body ul.demo li img {
+	border: 1px solid #e3e3e3;
+	padding: 3px;
+	width: 220px;
+}
+
+article.main-column .content-body ul.demo li .detail {
+	color: #fff;
+	padding: 20px;
+}
+
+article.main-column .content-body ul.demo li .ttl {
+	margin: 0 0 10px 0;
+	line-height: 1.3;
+	color: #fff;
+}
+
+article.main-column .content-body ul.demo li .txt {
+	color: #ccc;
+	font-size: 11px;
+	line-height: 1.3;
+}
+
+article.main-column .content-body ul.demo li .detail {
+	position: absolute;
+	top: 0;
+	left: -100%;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	-webkit-transition: .3s;
+	transition: .3s;
+	opacity: 1;
+}
+
+article.main-column .content-body ul.demo li .detail a {
+	display: block;
+	height: 100%;
+}
+
+article.main-column .content-body ul.demo li .detail a span {
+	display: block;
+}
+
+article.main-column .content-body ul.demo li:hover .detail {
+	top: 0;
+	left: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+article.main-column .content-body ul.demo li .detail {
+	padding: 10px;
+}
+
+article.main-column .content-body ul.demo li .detail {
+	background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+	height: 100%;
+	left: -100%;
+	opacity: 1;
+	position: static;
+	top: 0;
+	transition: none;
+	width: 220px;
+	z-index: 2;
+}
+
+article.main-column .content-body ul.demo li:hover .detail {
+	left: 0;
+	top: 220px;
+}
+}
+</style>
+</head>
+<body class="" cz-shortcut-listen="true">
+<div id="SDM">
+  <div id="SDM1">
+    <ul>
+      <li class="selected"><a href="http://eventregist.com/">ホーム</a></li>
+      <li><a href="https://eventregist.com/login">ログイン</a></li>
+      <li><a onclick="openSignupPopup('/entry/er?event_code=', '');" href="javascript:void(0)">新規会員登録</a></li>
+      <li><a href="https://help.eventregist.com/event/new">新しいイベントを作る</a></li>
+    </ul>
+    <h2>言語</h2>
+    <ul>
+      <li class="selected"><a href="https://eventregist.com/?lang=ja_JP">日本語</a></li>
+      <li class=""><a href="https://eventregist.com/?lang=en_US">English</a></li>
+      <li class=""><a href="https://eventregist.com/?lang=id_ID">Bahasa Indonesia</a></li>
+      <li class=""><a href="https://eventregist.com/?lang=zh_TW">中文(繁體)</a></li>
+      <li class=""><a href="https://eventregist.com/?lang=th_TH">ภาษาไทย</a></li>
+    </ul>
+    <h2>サポート・ヘルプ </h2>
+    <ul>
+      <li><a href="http://info.eventregist.com/about">イベントレジストについて</a></li>
+      <li><a href="http://info.eventregist.com/premium_features">プレミアム機能</a></li>
+      <li><a href="http://info.eventregist.com/operation">運営サポート</a></li>
+      <li><a href="http://info.eventregist.com/case-study">ご活用事例</a></li>
+      <li><a href="http://info.eventregist.com/library">資料ダウンロード</a></li>
+      <li><a href="http://eventregist.com/s/ja_JP/help/about-eventregist/eventowner-faq">FAQ（主催者の方へ）</a></li>
+      <li><a href="http://eventregist.com/s/ja_JP/help/about-eventregist/eventparticipants-faq">FAQ（参加者の方へ）</a></li>
+      <li><a href="http://eventregist.com/s/ja_JP/help/about-eventregist/howtouse">使い方</a></li>
+      <li><a href="http://eventregist.com/s/ja_JP/help/main">ヘルプセンター</a></li>
+      <li><a href="http://info.eventregist.com/weblog">ブログ</a></li>
+    </ul>
+    <h2>EventRegist Co., Ltd.</h2>
+    <ul>
+      <li><a href="http://eventregist.jp/" target="_blank">会社概要</a></li>
+      <li><a href="http://eventregist.com/s/ja_JP/c/about">特定商取引法に基づく表記</a></li>
+      <li><a href="http://eventregist.com/s/ja_JP/c/tos">ご利用規約</a></li>
+      <li><a href="http://eventregist.com/s/ja_JP/c/privacypolicy">個人情報保護方針</a></li>
+      <li><a href="http://eventregist.jp/career/" target="_blank">採用情報</a></li>
+      <li><a href="http://eventregist.com/s/ja_JP/c/press">取材について</a></li>
+    </ul>
+    <p class="copy">Copyright © EventRegist Co., Ltd. All rights reserved.</p>
+  </div>
+</div>
+<header>
+  <nav class="sp">
+    <div class="typeB" id="SPGHeader"><a class="btnSM" onclick="SDM()" href="javascript:void(0)">&nbsp;</a>
+      <h1>&nbsp;</h1>
+    </div>
+  </nav>
+  <nav class="pc">
+    <div class="gnavi inner">
+      <div class="logo"><a href="http://eventregist.com/"><img src="contens/logo_er01.png" alt="EventRegist(イベントレジスト)" width="194" target="_blank"></a></div>
+      <div class="link">
+        <div class="menu _dropDownHover firstChild"><a class="w3" href="javascript:void(0)">language<span class="ya">▼</span></a>
+          <div class="submenu premium dropDownBlock">
+            <ul>
+              <li><a href="https://eventregist.zendesk.com/hc/ja">日本語</a></li>
+              <li><a href="https://eventregist.zendesk.com/hc/en-us">English</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><a class="btn red small" href="https://eventregist.com/event/new">新しいイベントを作る</a></p>
+      </div>
+    </div>
+  </nav>
+</header>
+<article id="content">
+  <section class="main">
+    <nav id="gnavi-inner-home" class="">
+      <ul class="gnavi inner">
+        <li><a href="http://eventregist.com/" class="w6">ホーム</a></li>
+        <li><a href="http://info.eventregist.com/about" class="w6">イベントレジストについて</a></li>
+        <li><a href="http://info.eventregist.com/premium_features" class="w6">プレミアム機能</a></li>
+        <li><a href="http://info.eventregist.com/other-services" class="w6">運営サポート</a></li>
+        <li><a href="http://info.eventregist.com/case-study" class="w6">ご活用事例</a></li>
+        <li><a href="http://info.eventregist.com/weblog" class="w6">ブログ</a></li>
+      </ul>
+    </nav>
+  </section>
+</article>
+<div class="title-description">
+  <div class="title">イベントレジスト ヘルプセンター</div>
+  <div class="description">ヘルプセンターの内容では解決できない問題を抱えている場合は、お問い合わせ窓口までご連絡ください。</div>
+</div>
+<main role="main">
+  <article class="main-column">
+    <nav class="sub-nav">
+      <ol class="breadcrumbs">
+        <li title="EventRegist ヘルプセンター"> <a href="https://help.eventregist.com/hc/ja">EventRegist ヘルプセンター</a> </li>
+        <li title="[主催者・参加者共通]"> <a href="https://help.eventregist.com/hc/ja/categories/200185727--%E4%B8%BB%E5%82%AC%E8%80%85-%E5%8F%82%E5%8A%A0%E8%80%85%E5%85%B1%E9%80%9A-">[主催者・参加者共通]</a> </li>
+        <li title="イベントレジストについて"> <a href="https://help.eventregist.com/hc/ja/sections/200547387-%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%83%AC%E3%82%B8%E3%82%B9%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">イベントレジストについて</a> </li>
+      </ol>
+    </nav>
+    <div id="SDM">
+      <div id="SDM1">
+        <ul>
+          <li class="selected"><a href="http://eventregist.com/">ホーム</a></li>
+          <li><a href="https://eventregist.com/login">ログイン</a></li>
+          <li><a onclick="openSignupPopup('/entry/er?event_code=', '');" href="javascript:void(0)">新規会員登録</a></li>
+          <li><a href="https://help.eventregist.com/event/new">新しいイベントを作る</a></li>
+        </ul>
+        <h2>言語</h2>
+        <ul>
+          <li class="selected"><a href="https://eventregist.com/?lang=ja_JP">日本語</a></li>
+          <li class=""><a href="https://eventregist.com/?lang=en_US">English</a></li>
+          <li class=""><a href="https://eventregist.com/?lang=id_ID">Bahasa Indonesia</a></li>
+          <li class=""><a href="https://eventregist.com/?lang=zh_TW">中文(繁體)</a></li>
+          <li class=""><a href="https://eventregist.com/?lang=th_TH">ภาษาไทย</a></li>
+        </ul>
+        <h2>サポート・ヘルプ </h2>
+        <ul>
+          <li><a href="http://info.eventregist.com/about">イベントレジストについて</a></li>
+          <li><a href="http://info.eventregist.com/premium_features">プレミアム機能</a></li>
+          <li><a href="http://info.eventregist.com/operation">運営サポート</a></li>
+          <li><a href="http://info.eventregist.com/case-study">ご活用事例</a></li>
+          <li><a href="http://info.eventregist.com/library">資料ダウンロード</a></li>
+          <li><a href="http://eventregist.com/s/ja_JP/help/about-eventregist/eventowner-faq">FAQ（主催者の方へ）</a></li>
+          <li><a href="http://eventregist.com/s/ja_JP/help/about-eventregist/eventparticipants-faq">FAQ（参加者の方へ）</a></li>
+          <li><a href="http://eventregist.com/s/ja_JP/help/about-eventregist/howtouse">使い方</a></li>
+          <li><a href="http://eventregist.com/s/ja_JP/help/main">ヘルプセンター</a></li>
+          <li><a href="http://info.eventregist.com/weblog">ブログ</a></li>
+        </ul>
+        <h2>EventRegist Co., Ltd.</h2>
+        <ul>
+          <li><a href="http://eventregist.jp/" target="_blank">会社概要</a></li>
+          <li><a href="http://eventregist.com/s/ja_JP/c/about">特定商取引法に基づく表記</a></li>
+          <li><a href="http://eventregist.com/s/ja_JP/c/tos">ご利用規約</a></li>
+          <li><a href="http://eventregist.com/s/ja_JP/c/privacypolicy">個人情報保護方針</a></li>
+          <li><a href="http://eventregist.jp/career/" target="_blank">採用情報</a></li>
+          <li><a href="http://eventregist.com/s/ja_JP/c/press">取材について</a></li>
+        </ul>
+        <p class="copy">Copyright © EventRegist Co., Ltd. All rights reserved.</p>
+      </div>
+    </div>
+    <header class="article-header">
+      <h1> デモページ </h1>
+      <!--<div class="article-info">
+      <div class="article-avatar">
+        <img src="https://help.eventregist.com/system/photos/0001/0454/9642/LogoFacebook_v2.gif" alt="Avatar"/>
+      </div>
+      <div class="article-meta">
+        <strong class="article-author" title="EventRegist Helpcenter">
+          
+            EventRegist Helpcenter
+          
+        </strong>
+        <div class="article-updated meta"><time datetime="2017-01-25T05:29:08Z" title="2017-01-25T05:29:08Z" data-datetime="calendar">2017年01月25日 05:29</time></div>
+      </div>
+      <div><a class="article-subscribe" rel="nofollow" role="button" data-auth-action="signin" aria-selected="false" href="/hc/ja/articles/204573837-%E3%83%87%E3%83%A2%E3%83%9A%E3%83%BC%E3%82%B8/subscription">フォローする</a></div>
+    </div>--> 
+    </header>
+    
+    
+    
+    <div class="content-body article-body">
+      <p>Eventregist（イベントレジスト）は、デザインのカスタマイズも自由自在です。<br>
+        目的に応じて、イベント主催者様好みのイベント告知ページを作ることができます。<br>
+        以下のデモページで、実際にお申込も体験していただけますので是非お試しください。</p>
+      <p>&nbsp;</p>
+      <h3>[ベーシック版のデモイベント]</h3>
+      <br>
+      <ul class="demo">
+        <li> <a href="http://eventregist.com/e/Ss8BgumixKa4" target="_blank"> <span class="img"><img src="contens/img/img_demo_thumb_demo05.jpg" alt=""></span> </a>
+          <div class="detail"> <a href="http://eventregist.com/e/Ss8BgumixKa4" target="_blank"> <span class="ttl">通常のイベント</span> <span class="txt">有料・無料のチケットを販売することができます。中小規模のセミナーやイベントなどご活用いただける最もベーシックなパターンです。 </span> </a> </div>
+        </li>
+        <li> <a href="http://eventregist.com/e/oYdZgQ0pfOST" target="_blank"> <span class="img"><img src="contens/img/img_demo_thumb_demo01.jpg" alt=""></span></a>
+          <div class="detail"> <a href="http://eventregist.com/e/oYdZgQ0pfOST" target="_blank"> <span class="ttl">パスワードロック付きイベント</span> <span class="txt">特定の参加者のみイベントページを閲覧・チケットを購入させることが可能です。シークレットイベントや会員限定イベントなどにご活用ください。<br>
+            （password : demo） </span></a> </div>
+        </li>
+        <li> <a href="http://eventregist.com/e/hhp-shibuya2018" target="_blank"> <span class="img"><img src="contens/img/img_demo_thumb_demo06.jpg" alt=""></span></a>
+          <div class="detail"> <a href="http://eventregist.com/e/hhp-shibuya2018" target="_blank"> <span class="ttl">URLがカスタマイズされたイベント</span> <span class="txt">デフォルトではランダムな英数字のURLになりますが、http://eventregist.com/e/以下にお好きなURLをつけることが可能です。 </span> </a> </div>
+        </li>
+      </ul>
+      <h3>[プレミアム版のデモイベント]</h3>
+      <br>
+      <ul class="demo">
+        <li> <a href="http://eventregist.com/e/kxffhyYHC9o1?lang=en_US" target="_blank"> <span class="img"><img src="contens/img/img_demo_thumb_demo04.jpg" alt=""></span></a>
+          <div class="detail"> <a href="http://eventregist.com/e/kxffhyYHC9o1?lang=en_US" target="_blank"> <span class="ttl">外国通貨によるイベント</span> <span class="txt">決済通貨を外国通貨での料金設定が可能です。現在は米ドル、シンガポールドルに対応しています。</span> </a> </div>
+        </li>
+        <li> <a href="http://eventregist.com/e/rEp5Jm6mIwxw" target="_blank"> <span class="img"><img src="contens/img/img_demo_thumb_demo02.jpg" alt=""></span></a>
+          <div class="detail"> <a href="http://eventregist.com/e/rEp5Jm6mIwxw" target="_blank"> <span class="ttl">複数のセッションを含むタイムテーブルイベント</span> <span class="txt">大規模なカンファレンスで使用されるセッション型タイムテーブルに対応しています。複数の会場や柔軟な時間帯の設定が可能です。</span> </a> </div>
+        </li>
+        <li> <a href="http://eventregist.com/e/8qyu7d0pVYBQ" target="_blank"> <span class="img"><img src="contens/img/img_demo_thumb_demo03.jpg" alt=""></span></a>
+          <div class="detail"> <a href="http://eventregist.com/e/8qyu7d0pVYBQ" target="_blank"> <span class="ttl">抽選チケットイベント</span> <span class="txt">多数の応募者の中から抽選でチケット購入者を決めることが可能です。当選・落選の通知メールもお知らせいたします。</span> </a> </div>
+        </li>
+      </ul>
+      <p>有料機能を使ったイベントページの利用をご検討の方は、「イベントレジストのプレミアム機能」をご覧いただきお気軽にお問い合わせください。</p>
+      <p>▼イベントレジストのプレミアム機能<br>
+        <a href="http://info.eventregist.com/premium_features" target="_blank">http://info.eventregist.com/premium_features</a></p>
+      <br>
+      <h3>[主催者ページの公開]</h3>
+      <p>イベント主催者についての情報や開催中のイベントリストを公開することができます。<br>
+        ※パスワードロックがかかっているページは開催予定のイベントに公開されません。</p>
+      <ul class="demo">
+        <li> <a href="http://eventregist.com/p/erdemo" target="_blank"> <span class="img"><img src="contens/img/img_demo_thumb_orga.jpg" alt=""></span></a>
+          <div class="detail"> <a href="http://eventregist.com/p/erdemo" target="_blank"> <span class="ttl">主催者ページサンプル</span> <span class="txt">主催者ページも独自スタイルシートにて自由にカスタマイズすることも可能です。</span> </a> </div>
+        </li>
+      </ul>
+      <br>
+      <h3>導入事例</h3>
+      <p>これまでイベントレジストを導入していただいたクライアント様のページデザインの一部をご紹介します。</p>
+      <ul class="demo">
+        <li> <a href="http://eventregist.com/e/big-monster" target="_blank"> <span class="img"><img src="contens/img/img_demo_thumb_b-monster.jpg" alt=""></span> </a>
+          <div class="detail"> <a href="http://eventregist.com/e/big-monster" target="_blank"> <span class="ttl">b-monster or BIG-MONSTER実行委員会  様</span> <span class="txt">BIG-MONSTER produced by b-monster にてイベントレジストを導入していただきました。</span> </a></div>
+        </li>
+        <li> <a href="http://eventregist.com/e/slushtokyo2017" target="_blank"><span class="img"><img src="contens/img/img_demo_thumb_slush.jpg" alt=""></span> </a>
+          <div class="detail"> <a href="http://eventregist.com/e/slushtokyo2017" target="_blank"> <span class="ttl">Slush Tokyo 2017 様</span> <span class="txt">Slush Tokyo 2017 にてイベントレジストを導入していただきました。</span></a> </div>
+        </li>
+        <li> <a href="http://eventregist.com/e/OrSZH2HDRv4A" target="_blank"><span class="img"><img src="contens/img/img_demo_thumb_terasky.jpg" alt=""></span> </a>
+          <div class="detail"> <a href="http://eventregist.com/e/OrSZH2HDRv4A" target="_blank"><span class="ttl">株式会社テラスカイ イベント事務局 様</span> <span class="txt">TerraSkyDay 2017 ーデジタル・トランスフォーメーションに備えよー にてイベントレジストを導入していただきました。</span> </a></div>
+        </li>
+        <li> <a href="http://eventregist.com/e/HEARTCATCH2015" target="_blank"><span class="img"><img src="contens/img/img_demo_thumb_startup.jpg" alt=""></span> </a>
+          <div class="detail"> <a href="http://eventregist.com/e/HEARTCATCH2015" target="_blank"> <span class="ttl">株式会社 HEART CATCH 様</span> <span class="txt">HEART CATCH 2015 にてイベントレジストを導入していただきました。</span> </a></div>
+        </li>
+        <li> <a href="http://eventregist.com/e/serverlessconf2017" target="_blank"><span class="img"><img src="contens/img/img_demo_thumb_serverless.jpg" alt=""></span> </a>
+          <div class="detail"> <a href="http://eventregist.com/e/serverlessconf2017" target="_blank"> <span class="ttl">Serverless Community(JP) & 株式会社セクションナイン 様</span> <span class="txt">ServerlessConf Tokyo 2017 にてイベントレジストを導入していただきました。</span> </a> </div>
+        </li>
+        <li> <a href="http://eventregist.com/e/ceatec2016" target="_blank"><span class="img"><img src="contens/img/img_demo_thumb_ceatech.jpg" alt=""></span> </a>
+          <div class="detail"> <a href="http://eventregist.com/e/ceatec2016" target="_blank"> <span class="ttl">CEATEC 事務局 様</span> <span class="txt">CEATEC JAPAN 2016 にてイベントレジストを導入していただきました。</span> </a></div>
+        </li>
+        <li> <a href="http://eventregist.com/e/ktevent2" target="_blank"><span class="img"><img src="contens/img/img_demo_thumb_itogiri.jpg" alt=""></span></a>
+          <div class="detail"> <a href="http://eventregist.com/e/ktevent2" target="_blank"> <span class="ttl">東京システムハウス株式会社　KT-NET事務局 様</span> <span class="txt">IT大喜利　presented by KT-NET にてイベントレジストを導入していただきました。</span> </a> </div>
+        </li>
+        <li> <a href="http://eventregist.com/e/YDTPBee06" target="_blank"><span class="img"><img src="contens/img/img_demo_thumb_dtpbee.jpg" alt=""></span></a>
+          <div class="detail"> <a href="http://eventregist.com/e/YDTPBee06" target="_blank"> <span class="ttl">Yamaguchi DTP Bee 様</span> <span class="txt">Yamaguchi DTP Bee ♯6 にてイベントレジストを導入していただきました。</span> </a> </div>
+        </li>
+        <li> <a href="http://eventregist.com/e/aj_business2017" target="_blank"> <span class="img"><img src="contens/img/img_demo_thumb_animejapan.jpg" alt=""></span></a>
+          <div class="detail"> <a href="http://eventregist.com/e/aj_business2017" target="_blank"> <span class="ttl">AnimeJapan運営事務局 様</span> <span class="txt">AnimeJapan 2017 にてイベントレジストを導入していただきました。</span> </a> </div>
+        </li>
+      </ul>
+      <p>&nbsp;</p>
+      <h3>導入事例（主催者ページ）</h3>
+      <p>これまでイベントレジストを導入していただいたクライアント様の主催者ページデザインの一部をご紹介します。</p>
+      <ul class="demo">
+        <li> <a href="http://eventregist.com/p/moneyforward-event" target="_blank"> <span class="img"><img src="contens/img/img_demo_thumb_org_moneyfoward.jpg" alt=""></span> </a>
+          <div class="detail"> <a href="http://eventregist.com/p/moneyforward-event" target="_blank"> <span class="ttl">株式会社マネーフォワード 様</span></a></div>
+        </li>
+        <li> <a href="http://eventregist.com/p/academyhills" target="_blank"> <span class="img"><img src="contens/img/img_demo_thumb_org_achills.jpg" alt=""></span> </a>
+          <div class="detail"> <a href="http://eventregist.com/p/academyhills" target="_blank"> <span class="ttl">アカデミーヒルズ スクール事務局 様</span></a></div>
+        </li>
+        <li> <a href="http://eventregist.com/p/JP_Stripes" target="_blank"> <span class="img"><img src="contens/img/img_demo_thumb_org_stripes.jpg" alt=""></span> </a>
+          <div class="detail"> <a href="http://eventregist.com/p/JP_Stripes" target="_blank"> <span class="ttl">JP_Stripes 様</span></a></div>
+        </li>
+        <li> <a href="http://eventregist.com/p/sannoyorukatsulineup01" target="_blank"> <span class="img"><img src="contens/img/img_demo_thumb_org_sanno.jpg" alt=""></span> </a>
+          <div class="detail"> <a href="http://eventregist.com/p/sannoyorukatsulineup01" target="_blank"> <span class="ttl">学校法人産業能率大学　総合研究所 SANNO夜活講座事務局 様</span></a></div>
+        </li>
+        <li> <a href="http://eventregist.com/p/vinyl-museum" target="_blank"> <span class="img"><img src="contens/img/img_demo_thumb_org_vinyl.jpg" alt=""></span> </a>
+          <div class="detail"> <a href="http://eventregist.com/p/vinyl-museum" target="_blank"> <span class="ttl">VINYL MUSEUM Project 様</span></a></div>
+        </li>
+        <li> <a href="http://eventregist.com/p/xphotolaboratory" target="_blank"> <span class="img"><img src="contens/img/img_demo_thumb_org_xpl.jpg" alt=""></span> </a>
+          <div class="detail"> <a href="http://eventregist.com/p/xphotolaboratory" target="_blank"> <span class="ttl">XPL→X Photo Laboratory 様</span></a></div>
+        </li>
+        <li> <a href="http://eventregist.com/p/abejainc" target="_blank"> <span class="img"><img src="contens/img/img_demo_thumb_org_abeja.jpg" alt=""></span> </a>
+          <div class="detail"> <a href="http://eventregist.com/p/abejainc" target="_blank"> <span class="ttl">株式会社ABEJA 様</span></a></div>
+        </li>
+        <li> <a href="http://eventregist.com/p/massmedian-event" target="_blank"> <span class="img"><img src="contens/img/img_demo_thumb_org_massmedian.jpg" alt=""></span> </a>
+          <div class="detail"> <a href="http://eventregist.com/p/massmedian-event" target="_blank"> <span class="ttl">株式会社マスメディアン 様</span></a></div>
+        </li>
+        <li> <a href="http://eventregist.com/p/backstage" target="_blank"> <span class="img"><img src="contens/img/img_demo_thumb_org_backstage.jpg" alt=""></span> </a>
+          <div class="detail"> <a href="http://eventregist.com/p/backstage" target="_blank"> <span class="ttl">BACKSTAGE実行委員会 様</span></a></div>
+        </li>
+      </ul>
+      <p>&nbsp;</p>
+      <p><span class="wysiwyg-color-blue"><strong>画像・チケット・SNS/MAツール連携など、各種設定方法についてのセミナー開催中！</strong></span><br>
+        &gt;&gt;<a href="http://eventregist.com/p/EventRegist-events" target="_blank">詳しくはコチラ</a></p>
+    </div>
+    <div class="article-attachments">
+      <ul class="attachments">
+      </ul>
+    </div>
+    <footer class="article-footer">
+      <div class="article-vote"> <span class="article-vote-question">この記事は役に立ちましたか？</span>
+        <div class="article-vote-controls"> <a role="button" rel="nofollow" class="article-vote-up" title="はい" aria-selected="false" data-auth-action="signin" href="https://help.eventregist.com/hc/ja/signin?return_to=https%3A%2F%2Fhelp.eventregist.com%2Fhc%2Fja%2Farticles%2F204573837-%25E3%2583%2587%25E3%2583%25A2%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B8" target="_blank"></a> <a role="button" rel="nofollow" class="article-vote-down" title="いいえ" aria-selected="false" data-auth-action="signin" href="https://help.eventregist.com/hc/ja/signin?return_to=https%3A%2F%2Fhelp.eventregist.com%2Fhc%2Fja%2Farticles%2F204573837-%25E3%2583%2587%25E3%2583%25A2%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B8" target="_blank"></a> </div>
+        <small class="article-vote-count"> <span class="article-vote-label">0人中0人がこの記事が役に立ったと言っています</span> </small> </div>
+      <ul class="share">
+        <li><a href="https://www.facebook.com/share.php?title=%E3%83%87%E3%83%A2%E3%83%9A%E3%83%BC%E3%82%B8&amp;u=https%3A%2F%2Fhelp.eventregist.com%2Fhc%2Fja%2Farticles%2F204573837-%25E3%2583%2587%25E3%2583%25A2%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B8" class="share-facebook">Facebook</a></li>
+        <li><a href="https://twitter.com/share?lang=ja&amp;text=%E3%83%87%E3%83%A2%E3%83%9A%E3%83%BC%E3%82%B8&amp;url=https%3A%2F%2Fhelp.eventregist.com%2Fhc%2Fja%2Farticles%2F204573837-%25E3%2583%2587%25E3%2583%25A2%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B8" class="share-twitter">Twitter</a></li>
+        <li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;source=EventRegist+%E3%83%98%E3%83%AB%E3%83%97%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&amp;title=%E3%83%87%E3%83%A2%E3%83%9A%E3%83%BC%E3%82%B8&amp;url=https%3A%2F%2Fhelp.eventregist.com%2Fhc%2Fja%2Farticles%2F204573837-%25E3%2583%2587%25E3%2583%25A2%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B8" class="share-linkedin">LinkedIn</a></li>
+        <li><a href="https://plus.google.com/share?hl=ja&amp;url=https%3A%2F%2Fhelp.eventregist.com%2Fhc%2Fja%2Farticles%2F204573837-%25E3%2583%2587%25E3%2583%25A2%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B8" class="share-googleplus">Google+</a></li>
+      </ul>
+    </footer>
+    <div class="article-more-questions"> 
+      <!--他にご質問がございましたら、<a href="/hc/ja/requests/new">リクエストを送信</a>してください--> 
+      他にご質問がございましたら、<a href="https://help.eventregist.com/hc/ja/requests/new">リクエストを送信</a>してください </div>
+    
+    <!--<section class="article-comments">
+    <div class="comment-list-header">
+      <h4>0 コメント</h4>
+      <div class="comment-sorter">
+      
+      </div>
+    </div>
+    
+
+    
+
+    <div>記事コメントは受け付けていません。</div>
+
+    
+  </section>--> 
+    
+  </article>
+  <aside class="article-sidebar side-column">
+    <nav class="sub-nav"> 
+      <!--<ol class="breadcrumbs">
+  
+    <li title="EventRegist ヘルプセンター">
+      
+        <a href="/hc/ja">EventRegist ヘルプセンター</a>
+      
+    </li>
+  
+    <li title="[主催者・参加者共通]">
+      
+        <a href="/hc/ja/categories/200185727--%E4%B8%BB%E5%82%AC%E8%80%85-%E5%8F%82%E5%8A%A0%E8%80%85%E5%85%B1%E9%80%9A-">[主催者・参加者共通]</a>
+      
+    </li>
+  
+    <li title="イベントレジストについて">
+      
+        <a href="/hc/ja/sections/200547387-%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%83%AC%E3%82%B8%E3%82%B9%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">イベントレジストについて</a>
+      
+    </li>
+  
+</ol>
+-->
+      <form role="search" class="search" data-search="" action="/hc/ja/search" accept-charset="UTF-8" method="get">
+        <input name="utf8" value="✓" type="hidden">
+        <input name="query" id="query" placeholder="検索" aria-label="検索" type="search">
+        <input name="commit" value="検索" type="submit">
+      </form>
+    </nav>
+    <section class="recent-articles">
+      <h3>最近表示した記事</h3>
+      <ul>
+        <li><a href="https://help.eventregist.com/hc/ja/articles/206059742-%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B3%E3%82%BF%E3%82%AF%E3%83%88%E7%94%BB%E9%9D%A2%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">マイコンタクト画面の使い方</a></li>
+      </ul>
+    </section>
+    <section class="related-articles">
+      <h3>関連記事</h3>
+      <ul>
+        <li> <a href="https://help.eventregist.com/hc/ja/articles/204573777-%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E3%81%94%E8%B3%AA%E5%95%8F-%E4%B8%BB%E5%82%AC%E8%80%85%E6%A7%98%E5%90%91%E3%81%91-">よくあるご質問（主催者様向け）</a> </li>
+        <li> <a href="https://help.eventregist.com/hc/ja/articles/204758157-%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E6%83%85%E5%A0%B1%E3%82%92%E7%B7%A8%E9%9B%86">イベント情報を編集</a> </li>
+        <li> <a href="https://help.eventregist.com/hc/ja/articles/204573567-STEP1-%E5%9F%BA%E6%9C%AC%E6%83%85%E5%A0%B1%E3%82%92%E5%85%A5%E5%8A%9B%E3%81%99%E3%82%8B">STEP1. 基本情報を入力する</a> </li>
+        <li> <a href="https://help.eventregist.com/hc/ja/articles/217453247-%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E6%83%85%E5%A0%B1%E3%82%92%E7%B7%A8%E9%9B%86-%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E4%B8%80%E8%A6%A7%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B">イベント情報を編集 –イベント一覧ページを作成する</a> </li>
+        <li> <a href="https://help.eventregist.com/hc/ja/articles/216878388-%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%82%A4%E3%83%B3%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">チェックインアプリについて</a> </li>
+      </ul>
+    </section>
+  </aside>
+</main>
+<div id="fb-root" class=" fb_reset">
+  <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+    <div></div>
+  </div>
+  <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+    <div>
+      <iframe name="fb_xdm_frame_https" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;" src="contens/lY4eZXm_YWu.html" frameborder="0"></iframe>
+    </div>
+  </div>
+</div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<footer id="footer">
+  <div id="page-top" style="display: none;">
+    <p><a class="btn-page-top" href="#LW" onclick="slidePageTop()"><span>ページトップへ</span></a></p>
+  </div>
+  <nav>
+    <div class="inner">
+      <div class="gnavi">
+        <div class="link heightLine-FooterLinkBox">
+          <ul>
+            <li><a href="http://info.eventregist.com/about">イベントレジストについて</a></li>
+            <li><a href="http://info.eventregist.com/premium_features">プレミアム機能</a></li>
+            <li><a href="http://info.eventregist.com/other-services">運営サポート</a></li>
+            <li><a href="http://info.eventregist.com/case-study">ご活用事例</a></li>
+          </ul>
+        </div>
+        <div class="link heightLine-FooterLinkBox">
+          <ul>
+            <li><a href="https://help.eventregist.com/hc/ja/articles/204573777">FAQ（主催者の方へ）</a></li>
+            <li><a href="https://help.eventregist.com/hc/ja/articles/204573757">FAQ（参加者の方へ）</a></li>
+            <li><a href="https://help.eventregist.com/hc/ja/articles/204573797">使い方</a></li>
+            <li><a href="http://info.eventregist.com/library">資料ダウンロード</a></li>
+          </ul>
+        </div>
+        <div class="link last-child heightLine-FooterLinkBox">
+          <ul>
+            <li><a href="https://help.eventregist.com/hc/ja/">ヘルプセンター</a></li>
+            <li><a href="http://info.eventregist.com/premium">お問い合わせ(プレミアム機能)</a></li>
+            <li><a href="http://info.eventregist.com/service-event-operation">お問い合わせ(イベント運営代行)</a></li>
+            <li><a href="http://info.eventregist.com/weblog">ブログ</a></li>
+          </ul>
+        </div>
+        <div class="sns">
+          <div class="snsbtn">
+            <ul>
+              <li><a onclick="addSocial('fb')" href="javascript:void(0)" class="fb">facebook</a></li>
+              <li><a onclick="addSocial('tw')" href="javascript:void(0)" class="tw">twitter</a></li>
+              <li><a onclick="addSocial('gp')" href="javascript:void(0)" class="gp">google+</a></li>
+              <li><a onclick="addSocial('lin')" href="javascript:void(0)" class="lin">linkedin</a></li>
+            </ul>
+          </div>
+          <div class="fb-like fb_iframe_widget" data-href="http://eventregist.com/" data-send="false" data-layout="standard" data-width="320" data-show-faces="true" data-colorscheme="dark" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;color_scheme=dark&amp;container_width=232&amp;href=http%3A%2F%2Feventregist.com%2F&amp;layout=standard&amp;locale=ja_JP&amp;sdk=joey&amp;send=false&amp;show_faces=true&amp;width=320"><span style="vertical-align: bottom; width: 320px; height: 56px;">
+            <iframe name="f198acee19b0ea6" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" style="border: medium none; visibility: visible; width: 320px; height: 56px;" src="contens/like.html" class="" width="320px" height="1000px" frameborder="0"></iframe>
+            </span></div>
+        </div>
+      </div>
+      <div class="subnavi">
+        <div class="link"><a href="http://eventregist.com/" class="logo">EventRegist</a></div>
+        <div class="link">
+          <ul>
+            <li><a href="http://eventregist.jp/">会社概要</a></li>
+            <li><a href="http://eventregist.com/s/ja_JP/c/about">特定商取引法に基づく表記</a></li>
+            <li><a href="http://eventregist.com/s/ja_JP/c/tos">ご利用規約</a></li>
+            <li><a href="http://eventregist.com/s/ja_JP/c/privacypolicy">個人情報保護方針</a></li>
+            <li><a href="http://eventregist.jp/career/">採用情報</a></li>
+            <li><a href="http://eventregist.com/s/ja_JP/c/press">取材について</a></li>
+          </ul>
+          <p class="copy">Copyright © EventRegist Co., Ltd. All rights reserved.</p>
+        </div>
+        <div class="pmark"><a href="http://eventregist.com/s/ja_JP/c/about#_privacymark"><img src="contens/img_pmark.png" width="48" target="_blank"></a></div>
+      </div>
+    </div>
+  </nav>
+</footer>
+<script>
+$(function(){
+  var thisHref = window.location.href;
+  if((thisHref.indexOf('https://help.eventregist.com/hc/ja/signin?return_to=') != -1) || (thisHref.indexOf('https://help.eventregist.com/hc/en-us/signin?return_to=') != -1)) {
+		$("#fnc_premium").dialog({
+		width: 500,
+		resizable: true,
+		modal: true,
+		}).dialog('open');
+  }
+});
+</script>
+<div id="fnc_premium" title="専用のZendeskアカウントが必要です" style="display:none;">
+  <h2 class="dialogH2">プレミアム機能に関するヘルプページの閲覧には、専用Zendeskアカウントでのサインインが必要です</h2>
+  <p class="mb15">専用のZendeskアカウントは、当社担当よりお渡しします。<br>
+    プレミアム機能のご契約がお済みの方で、専用のZendeskアカウントをまだお持ちでない場合は、お手数をお掛けしますが、下記よりお問い合わせください。</p>
+  <p class="mb15"><a href="https://help.eventregist.com/hc/ja/requests/new"><strong>ヘルプページ（プレミアム機能）の閲覧に関するお問い合わせ</strong></a></p>
+  <ul class="SLBtn1">
+    <li>
+      <p class="SPBtnC"><a class="SPBtnCW1" href="javascript:void(0);" onclick='$("#fnc_premium").dialog("close")'>OK</a></p>
+    </li>
+  </ul>
+</div>
+
+<!-- / --> 
+
+<script type="text/javascript" src="contens/ja-ceec7697292423d3cf91fcba90236c98.js"></script> 
+<script src="contens/host.js" data-brand-id="47188" data-return-to="https://help.eventregist.com/hc/ja/articles/204573837" data-theme="hc" data-locale="67" data-auth-origin="47188,true,true"></script> 
+<script type="text/javascript">
+  /*
+
+    Greetings sourcecode lurker!
+
+    This is for internal Zendesk and legacy usage,
+    we don't support or guarantee any of these values
+    so please don't build stuff on top of them.
+
+  */
+
+  HelpCenter = {};
+  HelpCenter.account = {"subdomain":"eventregist","environment":"production","name":"EventRegist ヘルプセンター"};
+  HelpCenter.user = {"identifier":"da39a3ee5e6b4b0d3255bfef95601890afd80709","email":null,"name":null,"role":"anonymous","avatar_url":"https://assets.zendesk.com/hc/assets/default_avatar.png","organizations":[],"groups":[]};
+  HelpCenter.internal = {"asset_url":"//p12.zdassets.com/hc/assets/","current_session":{"locale":"ja","csrf_token":"tVdqMq1gki5Q9bKl7QWK8g3fc6mAU46CIwYd5FtCHAoEPTzPkx8pyOjzomnT+rvazkmdHEwZR8qhEge8XjuTkQ==","shared_csrf_token":null},"settings":{"zopim_enabled":false,"spam_filter_enabled":true},"current_record_id":"204573837","current_record_url":"/hc/ja/articles/204573837-%E3%83%87%E3%83%A2%E3%83%9A%E3%83%BC%E3%82%B8","current_record_title":"デモページ","search_results_count":null,"current_text_direction":"ltr","current_brand_url":"https://eventregist.zendesk.com","current_host_mapping":"help.eventregist.com","current_path":"/hc/ja/articles/204573837-%E3%83%87%E3%83%A2%E3%83%9A%E3%83%BC%E3%82%B8","authentication_domain":"https://eventregist.zendesk.com","show_autocomplete_breadcrumbs":true,"user_info_changing_enabled":false,"has_user_profiles_enabled":false,"has_anonymous_kb_voting":false,"has_advanced_upsell":false,"has_multi_language_help_center":true,"mobile_device":false,"mobile_site_enabled":true,"show_at_mentions":false,"has_copied_content":false,"embeddables_config":{"embeddables_web_widget":false,"embeddables_automatic_answers":false,"embeddables_connect_ipms":false},"embeddables_domain":"zendesk.com","answer_bot_subdomain":"static","plans_url":"https://help.eventregist.com/hc/admin/plan?locale=ja","manage_content_url":"https://help.eventregist.com/hc/ja","arrange_content_url":"https://help.eventregist.com/hc/admin/arrange_contents?locale=ja","general_settings_url":"https://help.eventregist.com/hc/admin/general_settings?locale=ja","user_segments_url":"https://help.eventregist.com/hc/admin/user_segments?locale=ja","has_community_enabled":false,"has_multiselect_field":false,"has_groups":true,"has_internal_sections":true,"has_organizations":true,"has_tag_restrictions":false,"has_answer_bot_web_form_enabled":false,"has_answer_bot_embeddable_standalone":false,"billing_url":"/access/return_to?return_to=https://eventregist.zendesk.com/billing","has_answer_bot":true,"answer_bot_management_url":"https://help.eventregist.com/hc/admin/answer_bot?locale=ja","is_account_owner":false,"guide_plan_state":"plan_legacy","has_theming_templates":false,"theming_center_url":"https://help.eventregist.com/theming","theming_cookie_key":"hc-da39a3ee5e6b4b0d3255bfef95601890afd80709-preview","is_preview":false};
+</script> 
+<script src="contens/hc_enduser-c25d858e0f92e8481575343942d4f8ae.js"></script> 
+<script type="text/javascript">
+    (function() {
+  var Tracker = {};
+
+  Tracker.track = function(eventName, data) {
+    var url = "https://help.eventregist.com/hc/tracking/events?locale=ja";
+
+    var payload = {
+      "event": eventName,
+      "data": data,
+      "referrer": document.referrer
+    };
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+    xhr.send(JSON.stringify(payload));
+  };
+
+    Tracker.track("article_viewed", "BAh7BzoLbG9jYWxlSSIHamEGOgZFVDoPYXJ0aWNsZV9pZGkEjYwxDA==--7f9977d38f44f10846d17480d513303686242baf");
+})();
+
+  </script>
+</body>
+</html>
